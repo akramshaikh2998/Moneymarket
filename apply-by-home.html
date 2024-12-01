@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+
+    <style>
+        /* General Styles */
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        } */
+
+        /* Navigation Bar Styles */
+        .navbar {
+            color: #fff;
+            background: #443098;
+        }
+
+        /*
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            float: left;
+        }
+
+        .navbar ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #575757;
+        } */
+
+        /* Form Container Styles */
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        } */
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #575757;
+        }
+
+        /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+        /* .form-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 400px;
+        }
+
+        form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="file"] {
+            padding: 3px;
+        }
+
+        button[type="submit"] {
+            background-color: #009879;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #007d68;
+        } */
+    </style>
+
+
+    <!-- Favicons -->
+    <link href="assets/img/fav.jpg" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="css/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y44QHQYX0T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y44QHQYX0T');
+    </script>
+
+
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+
+    <!-- ======= Header ======= -->
+    <!-- <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+            <a href="index.html" class="logo me-auto"></a>
+            <h1 class="logo me-auto">
+                <a href="index.html"><img src="assets/img/rupigrowbg.png" alt="" class="img-fluid">Money Market
+                    Solution</a>
+            </h1> -->
+
+
+
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="index.html">About</a></li>
+            <li class="dropdown"><a href="#"><span>Personal loan</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="interest.html">Interest Rates</a></li>
+                    <li><a href="documents.html">Documents Required</a></li>
+                    <li><a href="eligibility.html">Eligibility Criteria</a></li>
+                    <li><a href="howtoapply.html">How to Apply</a></li>
+
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>EMI Calculator</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="cal.html">Personal Loan</a></li>
+                    <li><a href="cal.html">Home Loan</a></li>
+                    <li><a href="cal.html">Education Loan</a></li>
+                    <li><a href="cal.html">Business Loan</a></li>
+
+
+                </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="index.html">Contact</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    </div>
+    <!-- </header>End Header -->
+
+
+    <!-- Application Form -->
+    <!-- <div class="form-container">
+        <h2>Application Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div> -->
+
+    <div class="form-container">
+        <form id="loanForm">
+            <h2>Loan Application Form</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="pancard">Pan Card No:</label>
+                <input type="text" id="pan" name="pan" required>
+            </div>
+            <div class="form-group">
+                <label for="loan">Loan Type:</label>
+                <select id="loan" name="loan" required>
+                    <option value="">Select Your Loan Type</option>
+                    <option value="personal">Personal Loan</option>
+                    <option value="business">Business Loan</option>
+                    <option value="home">Home Loan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="loandetails">Details about Loan Required:</label>
+                <textarea id="loandetails" name="loandetails" rows="3"></textarea>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+    <footer id="footer">
+
+
+        <div style="background-color:#443098; padding: 2%; color: white;">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Money Market Solution</h3>
+                        <p>
+                            Krishanlal Marwah Estate,<br>
+                            Saki Vihar Rd,<br>
+                            Marol,<br>
+                            Andheri East,<br>
+                            Mumbai-400072<br>
+                            <strong>Phone:</strong>+91 2246732956<br>
+                            <strong>Email:</strong> support@mmbs.in
+                            <br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Our Products</h3>
+                        <p><a href="cal.html">Personal Loan Calculator</a></p>
+                        <p><a href="cal.html">Home Loan Calculator</a></p>
+                        <p><a href="cal.html">Business Loan Calculator</a></p>
+                        <p><a href="cal.html">Education Loan Calculator</a></p>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>About us</h3>
+                        <p>
+                            At Money Market Solution, our mission is to build financial services that are simple,
+                            affordable and
+                            accessible in digital way.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Follow us on</h4>
+                        <div class="social-links mt-3">
+                            <a href="https://x.com/rupigrow?s=11" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="https://www.facebook.com/Rupigrow?mibextid=b06tZ0" class="facebook"><i
+                                    class="bx bxl-facebook"></i></a>
+                            <a href="https://instagram.com/rupigrow?igshid=NGVhN2U2NjQ0Yg==" class="instagram"><i
+                                    class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="https://www.linkedin.com/in/rupi-grow-8a6072252/" class="linkedin"><i
+                                    class="bx bxl-linkedin"></i></a>
+                            <a href="https://whatsapp.com/channel/0029VaDXrqX2Jl8Ebkamrj0t" class="whatsapp"><i
+                                    class="fab fa-whatsapp  fa-2x"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container footer-bottom clearfix">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Money Market Solution</span></strong>. All Rights Reserved
+                </div>
+            </div>
+        </div>
+
+
+
+
+        </div>
+    </footer><!-- End Footer -->
+
+
+
+</body>
+
+</html>

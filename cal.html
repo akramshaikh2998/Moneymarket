@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Loan Calculator</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/fav.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <style>
+    .calculator {
+
+      padding: 10px 25px;
+      background: linear-gradient(to bottom, #443098, #4caf50);
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+      font-family: "Poppins";
+
+      h2.title {
+        font-size: 1.75rem;
+        margin: 10px -5px;
+        margin-bottom: 30px;
+        color: #fff;
+      }
+    }
+
+    .calculator h1 {
+      font-size: 28px;
+      color: #d1bcec;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fffbfb;
+      margin-bottom: 10px;
+    }
+
+    .input-group input[type="range"] {
+      width: 100%;
+      height: 8px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #fffdfd;
+      border-radius: 4px;
+      outline: none;
+      margin-top: 8px;
+      padding: 10px;
+
+    }
+
+    .input-group input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #443098;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .input-group input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      align-items: center;
+      border: 1px solid #fffbfb;
+      border-radius: 5px;
+      background: linear-gradient(to right, #443098, #4caf50);
+      color: #ffffffe6;
+      font-size: 16px;
+      padding: 10px;
+
+    }
+
+    .output {
+      margin-top: 20px;
+    }
+
+    .output label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #f5eeee;
+    }
+
+    .output input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #fffdfd;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #4caf50;
+      background-color: #f0f0f0;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container button:hover {
+      background-color: #4caf50;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top" style="background-color: #4caf50;">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="logo me-auto"></a>
+      <h1 class="logo me-auto">
+        <a href="index.html"><img src="assets/img/rupigrowbg.png" alt="" class="img-fluid">Money Market Solution</a>
+      </h1>
+    </div>
+
+
+
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+        <li class="dropdown"><a href="#"><span>Personal loan</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="interest.html">Interest Rates</a></li>
+            <li><a href="documents.html">Document Required</a></li>
+            <li><a href="eligibility.html">Eligibility Criteria</a></li>
+            <li><a href="howtoapply.html">How to Apply</a></li>
+
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span>EMI Calculator</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="cal.html">Personal Loan</a></li>
+            <li><a href="cal.html">Home Loan</a></li>
+            <li><a href="cal.html">Education Loan</a></li>
+            <li><a href="cal.html">Business Loan</a></li>
+
+
+          </ul>
+        </li>
+        <li><a class="getstarted scrollto" href="apply-by-home.html">Apply Now</a></li>
+      </ul>
+      <!--<i class="bi bi-list mobile-nav-toggle"></i>-->
+    </nav><!-- .navbar -->
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Loan Calculator</li>
+        </ol>
+        <h2>Loan Calculator</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    <div class="calculator">
+
+      <div class="input-group">
+        <i class="fas fa-user-circle"></i>
+        <label id="loanAmountLabel">Loan Amount: <span id="loanAmountValuePlaceholder">0</span></label>
+        <input type="range" id="loanAmountSlider" min="0" max="2000000" step="10000">
+        <input type="text" id="loanAmount" placeholder="Loan Amount">
+      </div>
+      <div class="input-group">
+        <label id="interestRateLabel">Interest Rate: <span id="interestRateValuePlaceholder">0%</span></label>
+        <input type="range" id="interestRateSlider" min="0" max="50" step="0.1">
+        <input type="text" id="interestRate" placeholder="Interest Rate">
+      </div>
+      <div class="input-group">
+        <label id="loanTermLabel">Loan Term: <span id="loanTermValuePlaceholder">0 months</span></label>
+        <input type="range" id="loanTermSlider" min="0" max="200" step="1">
+        <input type="text" id="loanTerm" placeholder="Loan Term">
+      </div>
+      <div class="output">
+        <label>Monthly Payment</label>
+        <input type="text" id="monthlyPayment" value="Move the sliders" readonly>
+      </div>
+      <div class="output">
+        <label>Total Payment</label>
+        <input type="text" id="totalPayment" value="Move the sliders" readonly>
+      </div>
+      <div class="output">
+        <label>Total Interest</label>
+        <input type="text" id="totalInterest" value="Move the sliders" readonly>
+      </div>
+    </div>
+    <script>
+      const loanAmountSlider = document.getElementById("loanAmountSlider");
+      const loanAmountInput = document.getElementById("loanAmount");
+      const interestRateSlider = document.getElementById("interestRateSlider");
+      const interestRateInput = document.getElementById("interestRate");
+      const loanTermSlider = document.getElementById("loanTermSlider");
+      const loanTermInput = document.getElementById("loanTerm");
+
+      const monthlyPaymentInput = document.getElementById("monthlyPayment");
+      const totalPaymentInput = document.getElementById("totalPayment");
+      const totalInterestInput = document.getElementById("totalInterest");
+
+      function updateLabels() {
+        document.getElementById("loanAmountValuePlaceholder").textContent = loanAmountInput.value;
+        document.getElementById("interestRateValuePlaceholder").textContent = interestRateInput.value + "%";
+        document.getElementById("loanTermValuePlaceholder").textContent = loanTermInput.value + " months";
+      }
+
+      function calculateEMI() {
+        const loanAmount = parseFloat(loanAmountInput.value);
+        const interestRate = parseFloat(interestRateInput.value);
+        const loanTerm = parseInt(loanTermInput.value);
+
+        const monthlyInterestRate = (interestRate / 100) / 12;
+        const numberOfPayments = loanTerm;
+
+        const monthlyPayment = (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+        const totalPayment = monthlyPayment * numberOfPayments;
+        const totalInterest = totalPayment - loanAmount;
+
+        monthlyPaymentInput.value = monthlyPayment.toFixed(2);
+        totalPaymentInput.value = totalPayment.toFixed(2);
+        totalInterestInput.value = totalInterest.toFixed(2);
+
+        updateLabels();
+      }
+
+      loanAmountSlider.addEventListener("input", () => {
+        loanAmountInput.value = loanAmountSlider.value;
+        calculateEMI();
+      });
+
+      interestRateSlider.addEventListener("input", () => {
+        interestRateInput.value = interestRateSlider.value;
+        calculateEMI();
+      });
+
+      loanTermSlider.addEventListener("input", () => {
+        loanTermInput.value = loanTermSlider.value;
+        calculateEMI();
+      });
+
+      loanAmountInput.addEventListener("input", () => {
+        loanAmountSlider.value = loanAmountInput.value;
+        calculateEMI();
+      });
+
+      interestRateInput.addEventListener("input", () => {
+        interestRateSlider.value = interestRateInput.value;
+        calculateEMI();
+      });
+
+      loanTermInput.addEventListener("input", () => {
+        loanTermSlider.value = loanTermInput.value;
+        calculateEMI();
+      });
+
+      calculateEMI();
+    </script>
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div style="background-color:#443098; padding: 2%; color: white;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Money Market Solution</h3>
+            <p>
+              D-104, Marwah Industries,<br>
+              Opp Tata Power Saki Vihar Road,<br>
+              Sakinaka,<br>
+              Andheri East,<br>
+              Mumbai-400072<br>
+              <strong>Phone:</strong>+91 2240116319<br>
+              <strong>Email:</strong> support@mmbs.in
+              <br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Our Products</h3>
+            <p><a href="cal.html">Personal Loan Calculator</a></p>
+            <p><a href="cal.html">Home Loan Calculator</a></p>
+            <p><a href="cal.html">Business Loan Calculator</a></p>
+            <p><a href="cal.html">Education Loan Calculator</a></p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>About us</h3>
+            <p>
+              At Money Market Solution, our mission is to build financial services that are simple, affordable and
+              accessible in digital way.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Follow us on</h4>
+            <div class="social-links mt-3">
+              <a href="https://x.com/rupigrow?s=11" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/Rupigrow?mibextid=b06tZ0" class="facebook"><i
+                  class="bx bxl-facebook"></i></a>
+              <a href="https://instagram.com/rupigrow?igshid=NGVhN2U2NjQ0Yg==" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="https://www.linkedin.com/in/rupi-grow-8a6072252/" class="linkedin"><i
+                  class="bx bxl-linkedin"></i></a>
+              <a href="https://whatsapp.com/channel/0029VaDXrqX2Jl8Ebkamrj0t" class="whatsapp"><i
+                  class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Money Market Solution</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+
+
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
